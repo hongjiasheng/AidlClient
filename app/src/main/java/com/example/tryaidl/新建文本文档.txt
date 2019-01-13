@@ -1,0 +1,13 @@
+AIDL文件的生成:
+	要传递的非基本数据类型,需要进行序列化/反序列化 进程之间内存独立自主，读写访问通道
+	定义AIDL文件
+	定义含非基本数据类型的同名AIDL并paracelable化
+
+添加按钮，绑定服务,并
+	执行服务的onCreate方法
+		(构造Book对象，并添加到mbook列表中)
+	客户端的connection方法
+		(返回服务端的 由AIDL文件生成的BookManager对象并转化一下BookManager.Stub.asInterface(service)，调用服务端重写AIDL定义接口的方法进行进程通信)
+
+	服务的Connection
+	服务的解绑
